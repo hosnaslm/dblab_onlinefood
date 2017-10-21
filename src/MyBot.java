@@ -12,7 +12,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class MyBot extends TelegramLongPollingBot {
+public class MyBot extends TelegramLongPollingBot implements State {
 
     private final static String url = "jdbc:mysql://localhost:3306/new_schema";
     private final static String username = "newuser";
@@ -56,5 +56,21 @@ public class MyBot extends TelegramLongPollingBot {
     @Override
     public String getBotToken() {
         return "459213601:AAGgv8zwspiYq0xwbLW83U5iH4hAH043HF0";
+    }
+
+    @Override
+    public void message() {
+        
+
+    }
+
+    @Override
+    public void ChangeState() {
+
+    }
+
+    @Override
+    public void Validate() {
+
     }
 }
