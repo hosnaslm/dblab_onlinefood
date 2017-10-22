@@ -39,7 +39,7 @@ public class MyBot extends TelegramLongPollingBot implements State {
                     System.out.println("Database connected!");
                     Statement statement = connection.createStatement();
                     statement.setQueryTimeout(30);  // set timeout to 30 sec.
-                    statement.executeUpdate("insert into new_schema.users values (" + chat_id + ",'" + message_text + "');" );
+                    statement.executeUpdate("insert into new_schema.users (user_id, user_message) values (" + chat_id + ",'" + message_text + "');" );
                 } catch (SQLException e) {
                     throw new IllegalStateException("Cannot connect the database!", e);
                 }
